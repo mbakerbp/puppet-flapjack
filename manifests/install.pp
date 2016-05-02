@@ -167,7 +167,7 @@ class flapjack::install(
     dateext      => true,
     dateformat   => '.%Y%m%d',
     path         => '/var/log/flapjack/*.log',
-    rotate       => '14',
+    rotate       => 14,
     rotate_every => 'day',
     size         => '100M',
   }
@@ -181,7 +181,7 @@ class flapjack::install(
     dateext      => true,
     dateformat   => '.%Y%m%d',
     path         => '/var/log/flapjack/*.output',
-    rotate       => '14',
+    rotate       => 14,
     rotate_every => 'day',
     size         => '100M',
   }
