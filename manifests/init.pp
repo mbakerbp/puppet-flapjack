@@ -26,6 +26,7 @@ class flapjack(
   $feeder_enabled       = false,
   $flapper_enabled      = false,
   $manage_repo          = false,
+  $release              = "main",
   $nagios_receiver      = false,
   $server_name          = undef,
   $service_enabled      = true,
@@ -154,6 +155,7 @@ class flapjack(
   ## Validate Params
   validate_string(
     $server_name,
+    $release,
     $version,
     $redis_server,
     $redis_port,
@@ -340,7 +342,9 @@ class flapjack(
 
   ## Manage repo
   class {'flapjack::repo':
-    enable_repo => $manage_repo
+    enable_repo => $manage_repo,
+    release => $release,
+    version => $version
   }
 
   ## Install

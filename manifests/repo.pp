@@ -3,17 +3,23 @@
 # Installs the FlapJack Repositories
 #
 class flapjack::repo(
-  $enable_repo = false
+  $enable_repo = false,
+  $release => "main",
+  $version => "v1"
 ){
   validate_bool($enable_repo)
-
+  validate_string($release)
   if $enable_repo {
     case $::osfamily {
       'Debian': {
-        include flapjack::repo::apt
+      class {'flapjack::repo::apt':
+      release => $release,
+      version => $version
       }
       'RedHat': {
-        include flapjack::repo::yum
+      class {'flapjack::repo::yum':
+      release => $release
+      }
       }
       default: { alert("${::osfamily} not supported yet") }
     }
