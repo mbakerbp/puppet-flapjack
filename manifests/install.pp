@@ -153,7 +153,7 @@ class flapjack::install(
 
   if $version == "v1" {
   file { '/etc/flapjack/flapjack_config':
-    path    => '/etc/flapjack/flapjack_config.yaml'
+    path    => '/etc/flapjack/flapjack_config.yaml',
     ensure  => 'present',
     mode    => '0644',
     content => template('flapjack/etc/flapjack/flapjack_config.yaml.erb'),
@@ -163,7 +163,7 @@ class flapjack::install(
 
   if $version == "v2" {
   file { '/etc/flapjack/flapjack_config':
-    path    => '/etc/flapjack/flapjack_config.toml'
+    path    => '/etc/flapjack/flapjack_config.toml',
     ensure  => 'present',
     mode    => '0644',
     content => template('flapjack/etc/flapjack/flapjack_config.toml.erb'),
