@@ -12,10 +12,10 @@ class flapjack::service::flapjack(
     enable     => $service_enabled,
     hasstatus  => true,
     hasrestart => false,
-    require    => [ File['/etc/flapjack/flapjack_config.yaml'], Service['redis-flapjack'] ],
+    require    => [ File['/etc/flapjack/flapjack_config'], Service['redis-flapjack'] ],
     subscribe  => [
       Package['flapjack'],
-      File['/etc/flapjack/flapjack_config.yaml'],
+      File['/etc/flapjack/flapjack_config'],
     ]
   }
 

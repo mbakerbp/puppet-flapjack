@@ -151,13 +151,25 @@ class flapjack::install(
     mode   => '0755',
   }
 
-  file { '/etc/flapjack/flapjack_config.yaml':
+  if $version == "v1" {
+  file { '/etc/flapjack/flapjack_config':
+    path    => '/etc/flapjack/flapjack_config.yaml'
     ensure  => 'present',
     mode    => '0644',
-    content => template('flapjack/etc/flapjack/flapjack_config.erb'),
+    content => template('flapjack/etc/flapjack/flapjack_config.yaml.erb'),
     require => Package['flapjack']
   }
+  }
 
+  if $version == "v2" {
+  file { '/etc/flapjack/flapjack_config':
+    path    => '/etc/flapjack/flapjack_config.toml'
+    ensure  => 'present',
+    mode    => '0644',
+    content => template('flapjack/etc/flapjack/flapjack_config.toml.erb'),
+    require => Package['flapjack']
+  }
+  }
   logrotate::rule { 'flapjack-log':
     compress     => true,
     compresscmd  => '/bin/bzip2',

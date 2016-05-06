@@ -15,9 +15,11 @@ class flapjack::config {
     ensure  => directory,
     require => [ Package['flapjack'] ],
   }
-
+  
+  if $version == "v1" {
   file { '/etc/flapjack/flapjack-config.yaml':
     source  => 'puppet:///modules/flapjack/etc/flapjack/flapjack-config.yaml',
+  }
   }
 
   file { '/etc/init.d/flapjack-web-api':
