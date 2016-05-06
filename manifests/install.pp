@@ -137,7 +137,7 @@ class flapjack::install(
 
 
   package { 'flapjack':
-    ensure => $version
+    ensure => 'present'
   }
 
   file { ['/var/run/flapjack', '/var/log/flapjack', '/etc/flapjack'] :
