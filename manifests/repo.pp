@@ -4,8 +4,8 @@
 #
 class flapjack::repo(
   $enable_repo = false,
-  $release => "main",
-  $version => "v1"
+  $release = "main",
+  $version = "v1"
 ){
   validate_bool($enable_repo)
   validate_string($release)
@@ -15,6 +15,7 @@ class flapjack::repo(
       class {'flapjack::repo::apt':
       release => $release,
       version => $version
+      }
       }
       'RedHat': {
       class {'flapjack::repo::yum':
