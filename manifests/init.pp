@@ -370,7 +370,8 @@ class flapjack(
     service_enabled => $service_enabled,
     flapper_enabled => $flapper_enabled,
     nagios_receiver => $nagios_receiver,
-    redis_omnibus   => $redis_omnibus
+    redis_omnibus   => $redis_omnibus,
+    version         => $version 
   }
 
 
