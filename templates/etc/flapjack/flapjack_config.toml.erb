@@ -1,76 +1,76 @@
 <%
 if @prd_json_api_logger_syslog_errors
-  prd_jsonapi_syslog = 'yes'
+  prd_jsonapi_syslog = 'true'
 else
-  prd_jsonapi_syslog = 'no'
+  prd_jsonapi_syslog = 'false'
 end
 
 if @prd_web_ui_logger_syslog_errors
-  prd_webui_syslog = 'yes'
+  prd_webui_syslog = 'true'
 else
-  prd_webui_syslog = 'no'
+  prd_webui_syslog = 'false'
 end
 
 if @prd_web_ui_enabled
-  prd_webui_enable = 'yes'
+  prd_webui_enable = 'true'
 else
-  prd_webui_enable = 'no'
+  prd_webui_enable = 'false'
 end
 if @prd_json_api_enabled
-  prd_json_api_enable = 'yes'
+  prd_json_api_enable = 'true'
 else
-  prd_json_api_enable = 'no'
+  prd_json_api_enable = 'false'
 end
 if @prd_oobetet_enabled
-  prd_oobetet_enable = 'yes'
+  prd_oobetet_enable = 'true'
 else
-  prd_oobetet_enable = 'no'
+  prd_oobetet_enable = 'false'
 end
 
 if @prd_oobetet_logger_syslog_errors
-  prd_oobetet_syslog = 'yes'
+  prd_oobetet_syslog = 'true'
 else
-  prd_oobetet_syslog = 'no'
+  prd_oobetet_syslog = 'false'
 end
 
 if @prd_gw_pagerduty_logger_syslog_errors
-  prd_pagerduty_syslog = 'yes'
+  prd_pagerduty_syslog = 'true'
 else
-  prd_pagerduty_syslog = 'no'
+  prd_pagerduty_syslog = 'false'
 end
 
 if @prd_gw_pagerduty_enabled
-  prd_pagerduty_enabled = 'yes'
+  prd_pagerduty_enabled = 'true'
 else
-  prd_pagerduty_enabled = 'no'
+  prd_pagerduty_enabled = 'false'
 end
 
 if @prd_gw_jabber_logger_syslog_errors
-  prd_jabber_syslog = 'yes'
+  prd_jabber_syslog = 'true'
 else
-  prd_jabber_syslog = 'no'
+  prd_jabber_syslog = 'false'
 end
 
 if @prd_gw_jabber_enabled
-  prd_jabber_enabled = 'yes'
+  prd_jabber_enabled = 'true'
 else
-  prd_jabber_enabled = 'no'
+  prd_jabber_enabled = 'false'
 end
 
 if @prd_gw_sns_enabled
-  prd_sns_enable = 'yes'
+  prd_sns_enable = 'true'
 else
-  prd_sns_enable = 'no'
+  prd_sns_enable = 'false'
 end
 if @prd_gw_sms_logger_syslog_errors
-  prd_sms_logger_syslog = 'yes'
+  prd_sms_logger_syslog = 'true'
 else
-  prd_sms_logger_syslog = 'no'
+  prd_sms_logger_syslog = 'false'
 end
 if @prd_gw_sms_enabled
-  prd_sms_enabled = 'yes'
+  prd_sms_enabled = 'true'
 else
-  prd_sms_enabled = 'no'
+  prd_sms_enabled = 'false'
 end
 
 if @prd_gw_email_smtp_starttls
@@ -80,39 +80,39 @@ else
 end
 
 if @prd_gw_email_logger_syslog_errors
-  prd_email_logger_syslog = 'yes'
+  prd_email_logger_syslog = 'true'
 else
-  prd_email_logger_syslog = 'no'
+  prd_email_logger_syslog = 'false'
 end
 
 if @prd_gw_email_enabled
-  prd_email = 'yes'
+  prd_email = 'true'
 else
-  prd_email = 'no'
+  prd_email = 'false'
 end
 
 if @prd_notifier_logger_syslog_errors
-  notifier_logger_syslog = 'yes'
+  notifier_logger_syslog = 'true'
 else
-  notifier_logger_syslog = 'no'
+  notifier_logger_syslog = 'false'
 end
 
 if @prd_processor_logger_syslog_errors
-  prog_logger_syslog = 'yes'
+  prog_logger_syslog = 'true'
 else
-  prog_logger_syslog = 'no'
+  prog_logger_syslog = 'false'
 end
 
 if @prd_processor_enabled
-  processor_val = 'yes'
+  processor_val = 'true'
 else
-  processor_val = 'no'
+  processor_val = 'false'
 end
 
 if @prd_notifier_enabled
-  prd_notifier_val = 'yes'
+  prd_notifier_val = 'true'
 else
-  prd_notifier_val = 'no'
+  prd_notifier_val = 'false'
 end
 
 if @prd_processor_archive_events
